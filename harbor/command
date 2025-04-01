@@ -1,0 +1,8 @@
+# harbor namespace 생성
+kubectl greate namespace harbor
+
+# harbor values.yaml 다운
+helm show values harbor/harbor > harbor.yaml
+
+# harbor 설치
+helm install harbor harbor/harbor -n harbor -f harbor.yaml
