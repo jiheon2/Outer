@@ -1,0 +1,14 @@
+# Add Gitea Helm Chart
+helm repo add gitea-charts https://dl.gitea.com/charts/
+
+# Update Helm Chart
+helm repo update
+
+# Copy Gitea values.yaml
+helm show values gitea-charts/gitea > gitea.yaml
+
+# Create Namespace
+kubectl create namespace gitea
+
+# Install Gitea
+helm install gitea gitea-charts/gitea -n gitea -f gitea.yaml

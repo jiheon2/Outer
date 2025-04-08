@@ -1,0 +1,14 @@
+# Add Bitnami Helm Chart
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+# Update Helm Chart
+helm repo update
+
+# Copy PostgreSQL values.yaml
+helm show values bitnami/postgresql > postgresql.yaml
+
+# Create PostgreSQL Namespace
+kubectl create namespace postgresql
+
+# Install PostgreSQL
+helm install postgresql bitnami/postgresql -n postgresql -f postgresql.yaml

@@ -1,8 +1,14 @@
-# harbor namespace 생성
-kubectl greate namespace harbor
+# Add Harbor Helm Chart
+helm repo add harbor https://helm.goharbor.io
 
-# harbor values.yaml 다운
+# Update Helm Chart
+helm repo update
+
+# Copy Harbor values.yaml
 helm show values harbor/harbor > harbor.yaml
 
-# harbor 설치
+# Create Namespace
+kubectl create namespace harbor
+
+# Install Harbor
 helm install harbor harbor/harbor -n harbor -f harbor.yaml

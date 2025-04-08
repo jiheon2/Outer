@@ -1,0 +1,17 @@
+# Add Jenkins Helm Chart
+helm repo add jenkins https://charts.jenkins.io
+
+# Update Helm Chart
+helm repo update
+
+# Copy Jenkins values.yaml
+helm show values jenkins/jenkins > jenkins.yaml
+
+# Create Jenkins Namespace
+kubectl create namespace jenkins
+
+# Install Jenkins
+helm install jenkins jenkins/jenkins -n jenkins -f jenkins.yaml
+
+# Check Jenkins Admin Password
+kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/additional/chart-admin-password && echo

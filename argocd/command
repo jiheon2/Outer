@@ -1,20 +1,20 @@
-# ArgoCD 네임스페이스 생성
+# Create ArgoCD Namespace
 kubectl create namespace argocd
 
-# ArgoCD 설치
+# Install ArgoCD
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-# ArgoCD secret(인코딩 된 비밀번호) 확인
+# Check ArgoCD Secret
 kubectl get secret argocd-initial-admin-secret -o yaml -n argocd
 
-# ArgoCD 서비스 타입 변경(ClusterIP -> NodePort)
+# Change ArgoCD Service Type
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 
-# ArgoCD 비밀번호 디코딩
+# Decode ArgoCD Password
 echo <PW> | base64 --decode
 
-# Admin 계정 로그인
+# Login Admin
 argocd login <ArgoCD-Server ClusterIP>
 
-# Admin 계정 비밀번호 변경
+# Change Admin Password
 argocd account update-password --account admin
