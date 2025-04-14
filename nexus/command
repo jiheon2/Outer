@@ -1,0 +1,2 @@
+# YAML 파일 설치
+kubectl apply -f nexus.yaml

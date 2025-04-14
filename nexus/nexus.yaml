@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nexus
+
+---
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nexus
+  namespace: nexus
+spec:
+  serviceName: "nexus"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nexus
+  template:
+    metadata:
+      labels:
+        app: nexus
+    spec:
+      containers:
+      - name: nexus
+        image: sonatype/nexus3:latest  # OSS 버전은 Nexus OSS 이미지 사용
+        ports:
+        - containerPort: 8081
+          name: http
+        env:
+        - name: NEXUS_SECURITY_RANDOMPASSWORD
+          value: "false"
+        volumeMounts:
+        - name: nexus-data
+          mountPath: /nexus-data
+  volumeClaimTemplates:
+  - metadata:
+      name: nexus-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "nfs"  # 클러스터에 설정된 스토리지 클래스 이름으로 수정하세요.
+      resources:
+        requests:
+          storage: 5Gi  # 필요한 스토리지 용량으로 조정
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus
+  namespace: nexus
+spec:
+  selector:
+    app: nexus
+  ports:
+  - name: http
+    port: 8081
+    targetPort: 8081
+  type: NodePort
+
