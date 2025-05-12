@@ -1,0 +1,21 @@
+Postman : 개발자가 API를 테스트, 문서화, 공유할 수 있도록 돕는 소프트웨어 애플리케이션
+- 설치방법
+ - Postman 웹사이트에서 다운로드하여 설치
+- 기능
+ - API 요청 생성 및 전송 : GET, POST, PUT, DELETE 등 다양한 HTTP 메서드를 사용하여 API 요청을 생성하고 전송
+ - 응답 확인 및 디버깅 : API 응답을 JSON, XML 등 다양한 형식으로 확인 및 응답 코드 및 헤더 정보 확인 가능
+ - 컬렉션 관리 : 여러개의 API 요청을 그룹화하여 체계적으로 관리
+ - 자동화 테스트 및 스크립트 : Pre-request 및 Test script를 JavaScript 및 Snippet(코드 템플릿)을 사용하여 API 요청 전후에 자동으로 실행되는 스크립트 작성 가능, Collection Runner를 사용하여 여러 요청을 시나리오별로 실행
+ - API 문서화 : API 요청 및 응답을 문서화 및 공유
+ - Mock Server : 실제 API 서버 없이도 API 요청 및 응답을 시뮬레이션할 수 있는 Mock Server 기능 제공
+ - 코드 생성 : Postman에서 작성한 API 요청을 다양한 프로그래밍 언어 및 프레임워크에 맞는 코드로 변환하여 제공
+ - GUI 기반의 사용자 인터페이스 : 직관적인 GUI를 통해 API 요청을 쉽게 생성하고 관리할 수 있는 기능 제공
+
+Newman : Postman에서 만든 컬렉션과 환경 파일을 명령줄(CLI)에서 실행해 자동화된 API 테스트를 수행할 수 있는 오픈소스
+- 설치방법
+ - Node.js 기반으로 설치
+- 기능
+ - Postman 컬렉션 실행 : Postman에서 작성한 API 요청을 포함한 컬렉션을 명령줄에서 실행
+ - 테스트 자동화 및 CI/CD 통합 : Jenkins, GitHub Actions 등 CI/CD 도구와 통합하여 자동화된 테스트 수행
+ - 테스트 리포트 생성 : HTML, JSON, CLI 등 다양한 형식으로 테스트 결과 리포트 생성, 리포터 플러그인 사용 가능
+ - 데이터 기반 테스트 : CSV, JSON 파일을 사용하여 데이터 기반의 API 테스트(데이터 드리븐 테스트) 수행

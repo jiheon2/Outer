@@ -1,0 +1,45 @@
+properties([
+  parameters([
+    gitParameter(
+      name: 'TAG',
+      type: 'PT_TAG', // 브랜치와 태그 모두 선택 가능
+      defaultValue: 'main',
+      description: '빌드할 태그 선택',
+      branchFilter: '.*', // 모든 브랜치/태그 표시
+      useRepository: 'http://34.22.79.12:30300/jiheonk/cicd-test.git',
+      selectedValue: 'DEFAULT',
+      sortMode: 'NONE',
+      quickFilterEnabled: true
+    )
+  ])
+])
+
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        checkout([$class: 'GitSCM',
+                  branches: [[name: "${params.TAG}"]],
+                  userRemoteConfigs: [[
+                    url: 'http://34.22.79.12:30300/jiheonk/cicd-test.git',
+                    credentialsId: 'gitea-test-token'
+                  ]]
+        ])
+      }
+    }
+    stage('Build') {
+      steps {
+        script {
+          def buildTag = "${params.TAG}"
+          echo "Building with tag: ${buildTag}"
+          // 빌드 작업 수행
+          sh 'echo "Building..."'
+        }
+      }
+    }
+  }
+}
+    
+    
+    
