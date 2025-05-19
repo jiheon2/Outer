@@ -13,6 +13,11 @@ Hybrid Cloud : Public + Private Cloud로 두 환경 간의 데이터와 애플�
 Multi Cloud : 여러 Public 클라우드 제공업체를 동시에 사용하는 모델(ex: AWS + GCP, AWS + Azure)
 Community Cloud : 공통된 목표를 가진 여러 조직이 공유하는 클라우드
 
+# 아키텍처 종류
+내부 아키텍처(Inner Architecture) : 시스템 내부에서 실제 비즈니스 로직이 어떻게 구현되고, 서비스가 어떻게 분할, 설계되는지에 초점을 둔 아키텍처
+외부 아키텍처(Outer Architecture) : 시스템의 전체적인 운영 환경과 통합 방식을 정의하는 아키텍처
+
+
 가상화(Virtualization) : 
 하이퍼바이저(Hypervisor) : 
 컨테이너(Container) : 
@@ -41,3 +46,4 @@ MSA(Microservices Architecture) :
 데브섹옵스(DevSecOps) : 
 CI(Continous Integration) : 
 CD(Continous Deployment/Delivery) : 
+DMZ(DevOps Maturity Zone) : IT 네트워크에서 외부 네트워크와 내부 네트워크 사이에 위치한 중간 보안 구역역

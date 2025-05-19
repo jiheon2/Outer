@@ -4,6 +4,7 @@ CMP(Cloud Management Platform) : 클라우드 관리 플랫폼 솔루션(베스�
 RFP(Request for Proposal) : 클라이언트(고객)가 SI 업체(회사)에 제안한 요구사항을 정리한 문서(목적, 범위, 예산, 일정, 기술적 요구사항 등 포함)
 마일스톤(Milestone) : 프로젝트 일정에서 중요한 지점이나 목표
 WBS(Work Breakdown Structure) : 작업 분담 및 일정 관리를 하기 위한 프로젝트 관리 도구 및 문서
+간트 차트(Gantt Chart) : 프로젝트 일정 관리 도구(작업의 시작일과 종료일을 시각적으로 표현)
 ASIS & TOBE(애즈 이즈 앤 투 비) : ASIS(이전에는 ~ 했는데), TOBE(이제 이렇게 할것이다)
 감리 : 설계나 계획대로 작업이 제대로 진행되고 있는지 감독하고 관리(문제 발견 및 개선 권고)하는 활동(발주자를 대신하여 제3자가 수행)
 감사 : 완료된 업무나 결과물의 적법성과 정당성 검토
@@ -13,13 +14,18 @@ ASIS & TOBE(애즈 이즈 앤 투 비) : ASIS(이전에는 ~ 했는데), TOBE(�
 요구사항정의서 : 고객, 사용자들이 필요로 하는 요구사항을 체계적으로 정리한 문서
 기능적 요구사항 : 시스템이 수행해야 할 주요 기능
 비기능적 요구사항 : 성능, 보안, 확장성, 사용성 등 시스템 품질에 관한 요구사항
-SI(System Integration) : 
-SM
-PMO(Project Management Office) : 
-PM
-PL
-AA
-TA
-DBA
-ManMonth(MM)
-FP
+SI(System Integration, 시스템 통합) : 새로운 시스템이나 서비스를 구축하는 프로젝트 중심의 업무(개발, 통합, 전환, 고도화 등)
+SM(System Management, Maintenance, 시스템 운영/유지보수) : 이미 구축된 시스템을 안정적으로 운영하고, 유지보수하는 업무(오류 수정, 기능 개선, 성능 향상 등)
+PMO(Project Management Office) : 프로젝트를 중앙에서 통합 관리하는 조직(프로젝트 관리 체계 수립, 프로젝트 지원 및 조정)
+PM(Project Manager) : 프로젝트를 계획하고, 실행하며, 모니터링하는 책임자(총괄 책임)
+PL(Project Leader) : 프로젝트의 기술적 측면을 책임지고 관리하는 사람(각 파트 별 책임)
+AA(Application Architect) : 애플리케이션 아키텍트, 시스템의 구조와 설계를 담당하는 전문가
+TA(Technical Architect) : 기술 아키텍트, 시스템의 기술적 설계를 담당하는 전문가
+DBA(DataBase Administrator) : 데이터베이스 관리 및 운영을 담당하는 전문가
+QA(Quality Assurance) : 품질 보증, 테스트 및 품질 관리를 담당하는 전문가
+BA(Business Analyst) : 비즈니스 분석가, 고객의 요구사항을 분석하고 문서화하는 전문가
+SA(Security Architect) : 보안 아키텍트, 시스템의 보안을 설계하고 관리하는 전문가
+ManMonth(MM) : 인력 투입 기간을 나타내는 단위(1인 1개월 기준)
+FP(Function Point) : 소프트웨어의 기능을 측정하는 단위(기능 점수)
+IT 거버넌스(IT Governance) : IT 자원과 프로세스를 관리하고 통제하는 체계
+컴플라이언스(Compliance) : 기업이 사업을 추진하는 과정에서 관련 법률, 규정, 윤리 기준 등을 준수하도록 하는 일련의 시스템이나 활동동
